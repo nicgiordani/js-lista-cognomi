@@ -6,9 +6,12 @@
 var cognome = prompt("inserisci il tuo cognome");
 // console.log(cognome);
 
-var listaCognomi = ["Pesce", "Castanetto", "Passaro", "Grimaldi", "Rossi", "Verdi", "Bianchi",]
-listaCognomi.push(cognome);
+var listaCognomi = ["Pesce", "Zucchi", "Castanetto", "Passaro", "Grimaldi", "Rossi", "Verdi", "Bianchi",]
 
 for(var i = 0; i < listaCognomi.length; i++) {
   console.log(listaCognomi[i]);
 }
+listaCognomi.push(cognome);
+document.getElementById('lista').innerHTML = listaCognomi.sort();
+
+var posizione = listaCognomi.indexOf(cognome);
